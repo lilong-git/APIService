@@ -1,0 +1,21 @@
+//
+//  APIService.rele.xcconfig
+//  APIService
+//
+//  Created by Simon on 2021/3/11.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-APIService/Pods-APIService.release.xcconfig"
+APIHostEn = developer.apple.com   //英语
+APIHostId = developer.apple.com   //印尼语
+APIHostVi = developer.apple.com   //越南语
+APIHostTh = developer.apple.com   //泰语
+APIHostRu = developer.apple.com   //俄语
+
+WebHostEn = developer.apple.com  //英语
+WebHostId = developer.apple.com  //印尼
+WebHostVi = developer.apple.com  //越南
+WebHostTh = developer.apple.com  //泰国
+WebHostRu = developer.apple.com  //俄语

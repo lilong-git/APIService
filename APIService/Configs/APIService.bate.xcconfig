@@ -1,0 +1,22 @@
+//
+//  APIService.bate.xcconfig
+//  APIService
+//
+//  Created by Simon on 2021/3/11.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-APIService/Pods-APIService.bate.xcconfig"
+APIHostEn = github.com    //英语
+APIHostId = github.com.1    //印尼语
+APIHostVi = github.com.2    //越南语
+APIHostTh = github.com.3    //泰语
+APIHostRu = github.com:8443    //俄语
+
+
+WebHostEn = github.com  //英语
+WebHostId = github.com  //印尼
+WebHostVi = github.com  //越南
+WebHostTh = github.com  //泰国
+WebHostRu = github.com:8443  //俄语
