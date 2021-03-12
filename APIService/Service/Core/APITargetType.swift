@@ -12,6 +12,7 @@ import SwiftyJSON
 import ObjectMapper
 import RxSwift
 import CryptoSwift
+import DeviceKit
 
 /// 请求头配置
 public func requestHeaders() -> [String : String]? {

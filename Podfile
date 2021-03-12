@@ -23,5 +23,8 @@ target 'APIService' do
   
   # 工具
   pod 'SwiftDate'
+  
+  # 设备信息
+  pod 'DeviceKit'
 
 end

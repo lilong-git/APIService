@@ -8,6 +8,7 @@
 
 import Foundation
 import KeychainAccess
+import DeviceKit
 
 let kAppService      = "AppSerices"
 let kAppDeviceUUID   = "AppDeviceUUID"
@@ -102,13 +103,6 @@ class AppInfoHelper: NSObject {
      设备型号
      */
     static func machineModel() -> String {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
-        let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8, value != 0 else { return identifier }
-            return identifier + String(UnicodeScalar(UInt8(value)))
-        }
-        return identifier  
+        return Device.current.description
     }
 }
