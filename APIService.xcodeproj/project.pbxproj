@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73D4D2DC64EA7CAC19592248 /* Pods_APIService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FB744717E21332A2586AE2 /* Pods_APIService.framework */; };
 		F49E53A12686CA7E0022BAED /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E53A02686CA7E0022BAED /* Transform.swift */; };
+		F49E53AD268701EE0022BAED /* Mappable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E53AC268701EE0022BAED /* Mappable+ObjectMapper.swift */; };
 		F4B52BD425F9EC8200E64CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BD325F9EC8200E64CA0 /* AppDelegate.swift */; };
 		F4B52BD625F9EC8200E64CA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BD525F9EC8200E64CA0 /* SceneDelegate.swift */; };
 		F4B52BD825F9EC8200E64CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BD725F9EC8200E64CA0 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		822ECAE377900A62B608549A /* Pods-APIService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIService.release.xcconfig"; path = "Target Support Files/Pods-APIService/Pods-APIService.release.xcconfig"; sourceTree = "<group>"; };
 		B20E2D6570F13323FB1EDBB5 /* Pods-APIService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIService.debug.xcconfig"; path = "Target Support Files/Pods-APIService/Pods-APIService.debug.xcconfig"; sourceTree = "<group>"; };
 		F49E53A02686CA7E0022BAED /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		F49E53AC268701EE0022BAED /* Mappable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mappable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		F4B52BD025F9EC8200E64CA0 /* APIService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B52BD325F9EC8200E64CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B52BD525F9EC8200E64CA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				F4B52BF825F9ECC900E64CA0 /* ObserverType+ObjectMapper.swift */,
 				F4B52BF925F9ECC900E64CA0 /* Single+MoyaObjectMapper.swift */,
 				F4B52BFA25F9ECC900E64CA0 /* Response+ObjectMapper.swift */,
+				F49E53AC268701EE0022BAED /* Mappable+ObjectMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				F4B52C0425F9ECC900E64CA0 /* APIService.swift in Sources */,
 				F4B52C0525F9ECC900E64CA0 /* Configuration.swift in Sources */,
 				F4B52C0125F9ECC900E64CA0 /* APITargetType.swift in Sources */,
+				F49E53AD268701EE0022BAED /* Mappable+ObjectMapper.swift in Sources */,
 				F4B52C0025F9ECC900E64CA0 /* APIError.swift in Sources */,
 				F4B52C6925F9F5C900E64CA0 /* AppConfigManager.swift in Sources */,
 				F4B52BD625F9EC8200E64CA0 /* SceneDelegate.swift in Sources */,

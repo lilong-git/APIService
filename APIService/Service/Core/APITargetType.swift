@@ -73,11 +73,9 @@ public struct Headers {
     var utc: String = String(DateHelper.utc())
     var sign: String = ""
     var userToken: String = ""
-    
-    
 }
 
-public protocol APITargetType : TargetType {
+protocol APITargetType : TargetType {
     /// 语言环境
     var language: AppLanguage { get }
     /// 请求参数
@@ -86,6 +84,7 @@ public protocol APITargetType : TargetType {
 
 
 extension APITargetType {
+    typealias RequestMethod = Moya.Method
     
     public var language: AppLanguage {
         return LanguageManager.default.currentAppLanguage
@@ -95,7 +94,7 @@ extension APITargetType {
         return URL(string: AppConfigManager.default.baseAPI())!
     }
     
-    public var method: Moya.Method {
+    public var method: RequestMethod {
         return .post
     }
 

@@ -63,6 +63,21 @@ public extension TargetType {
             return response
         }
     }
+    func upload() -> Observable<Moya.ProgressResponse> {
+        return APIService.default.provider.rx.requestWithProgress(.target(self)).map { response -> ProgressResponse in
+            
+            return response
+        }
+    }
+    
+    func download() -> Observable<Moya.ProgressResponse> {
+        return APIService.default.provider.rx.requestWithProgress(.target(self)).map { response -> ProgressResponse in
+            
+            return response
+        }
+    }
+    
+    
     
     func requestObject<T: Mappable>(_ type: T.Type) -> Single<T> {
         return request().mapObject(type)
@@ -76,9 +91,5 @@ public extension TargetType {
     
 }
 
-public extension Mappable {
-    init() {
-        self.init(map: Map(mappingType: .fromJSON, JSON: [:]))!
-    }
-}
+
 
