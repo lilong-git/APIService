@@ -303,7 +303,6 @@ extension APIError: LocalizedError {
 let networkCode: [Int: (status: Int, msg: String)] = [
     // App级区别码10000
     10000: (status: 10000, msg: "网络异常，请稍后重试！"),
-    // 登陆注册区别码10001
     10001: (status: 10001, msg: "请求地址异常"),
     10002: (status: 10002, msg: "服务器异常，请稍后重试！"),
     10003: (status: 10003, msg: "接口未找到"),
@@ -314,3 +313,9 @@ let networkCode: [Int: (status: Int, msg: String)] = [
     10008: (status: 10008, msg: "对象序列化异常"),
     10009: (status: 10009, msg: "执行结果不合法,没有状态字段")
 ]
+
+
+
+enum ErrorCode {
+    case c10000
+}

@@ -46,23 +46,22 @@ public struct BaseResponse: Mappable {
     }
 }
 
-public extension NetworkService {
-    class Configuration {
-        public static var `default`: Configuration = Configuration()
-        
-        public var addingHeaders: (TargetType) -> [String: String] = { _ in [:] }
 
-        public var replacingTask: (TargetType) -> Task = { $0.task }
-        
-        /// 网络超时时间
-        public var timeoutInterval: TimeInterval = 60
-        
-        /// 插件
-        public var plugins: [PluginType] = [LoggerPlugin()]
-        
-        /// 能否打印 log
-        public var logEnable: Bool = true
-        
-        public init() { }
-    }
+public class Configuration {
+    public static var `default`: Configuration = Configuration()
+    
+    public var addingHeaders: (TargetType) -> [String: String] = { _ in [:] }
+
+    public var replacingTask: (TargetType) -> Task = { $0.task }
+    
+    /// 网络超时时间
+    public var timeoutInterval: TimeInterval = 60
+    
+    /// 插件
+    public var plugins: [PluginType] = [LoggerPlugin()]
+    
+    /// 能否打印 log
+    public var logEnable: Bool = true
+    
+    public init() { }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73D4D2DC64EA7CAC19592248 /* Pods_APIService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FB744717E21332A2586AE2 /* Pods_APIService.framework */; };
+		F49E53A12686CA7E0022BAED /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E53A02686CA7E0022BAED /* Transform.swift */; };
 		F4B52BD425F9EC8200E64CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BD325F9EC8200E64CA0 /* AppDelegate.swift */; };
 		F4B52BD625F9EC8200E64CA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BD525F9EC8200E64CA0 /* SceneDelegate.swift */; };
 		F4B52BD825F9EC8200E64CA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BD725F9EC8200E64CA0 /* ViewController.swift */; };
@@ -17,11 +18,11 @@
 		F4B52C0025F9ECC900E64CA0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BEB25F9ECC900E64CA0 /* APIError.swift */; };
 		F4B52C0125F9ECC900E64CA0 /* APITargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BEC25F9ECC900E64CA0 /* APITargetType.swift */; };
 		F4B52C0225F9ECC900E64CA0 /* LoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BED25F9ECC900E64CA0 /* LoggerPlugin.swift */; };
-		F4B52C0425F9ECC900E64CA0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BEF25F9ECC900E64CA0 /* NetworkService.swift */; };
+		F4B52C0425F9ECC900E64CA0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BEF25F9ECC900E64CA0 /* APIService.swift */; };
 		F4B52C0525F9ECC900E64CA0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BF025F9ECC900E64CA0 /* Configuration.swift */; };
 		F4B52C0B25F9ECC900E64CA0 /* ObserverType+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BF825F9ECC900E64CA0 /* ObserverType+ObjectMapper.swift */; };
 		F4B52C0C25F9ECC900E64CA0 /* Single+MoyaObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BF925F9ECC900E64CA0 /* Single+MoyaObjectMapper.swift */; };
-		F4B52C0D25F9ECC900E64CA0 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BFA25F9ECC900E64CA0 /* Observable+ObjectMapper.swift */; };
+		F4B52C0D25F9ECC900E64CA0 /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BFA25F9ECC900E64CA0 /* Response+ObjectMapper.swift */; };
 		F4B52C0F25F9ECC900E64CA0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BFD25F9ECC900E64CA0 /* API.swift */; };
 		F4B52C1025F9ECC900E64CA0 /* APIConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52BFE25F9ECC900E64CA0 /* APIConst.swift */; };
 		F4B52C4625F9F38600E64CA0 /* AppInfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B52C3F25F9F38600E64CA0 /* AppInfoHelper.swift */; };
@@ -35,6 +36,7 @@
 		740EEDDFAD1938FF0A7D38C3 /* Pods-APIService.bate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIService.bate.xcconfig"; path = "Target Support Files/Pods-APIService/Pods-APIService.bate.xcconfig"; sourceTree = "<group>"; };
 		822ECAE377900A62B608549A /* Pods-APIService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIService.release.xcconfig"; path = "Target Support Files/Pods-APIService/Pods-APIService.release.xcconfig"; sourceTree = "<group>"; };
 		B20E2D6570F13323FB1EDBB5 /* Pods-APIService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIService.debug.xcconfig"; path = "Target Support Files/Pods-APIService/Pods-APIService.debug.xcconfig"; sourceTree = "<group>"; };
+		F49E53A02686CA7E0022BAED /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		F4B52BD025F9EC8200E64CA0 /* APIService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B52BD325F9EC8200E64CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B52BD525F9EC8200E64CA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,11 +48,11 @@
 		F4B52BEB25F9ECC900E64CA0 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F4B52BEC25F9ECC900E64CA0 /* APITargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITargetType.swift; sourceTree = "<group>"; };
 		F4B52BED25F9ECC900E64CA0 /* LoggerPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerPlugin.swift; sourceTree = "<group>"; };
-		F4B52BEF25F9ECC900E64CA0 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F4B52BEF25F9ECC900E64CA0 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F4B52BF025F9ECC900E64CA0 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		F4B52BF825F9ECC900E64CA0 /* ObserverType+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObserverType+ObjectMapper.swift"; sourceTree = "<group>"; };
 		F4B52BF925F9ECC900E64CA0 /* Single+MoyaObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+MoyaObjectMapper.swift"; sourceTree = "<group>"; };
-		F4B52BFA25F9ECC900E64CA0 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
+		F4B52BFA25F9ECC900E64CA0 /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
 		F4B52BFD25F9ECC900E64CA0 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F4B52BFE25F9ECC900E64CA0 /* APIConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConst.swift; sourceTree = "<group>"; };
 		F4B52C1725F9EE1F00E64CA0 /* APIService.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIService.debug.xcconfig; sourceTree = "<group>"; };
@@ -144,8 +146,9 @@
 				F4B52BEB25F9ECC900E64CA0 /* APIError.swift */,
 				F4B52BEC25F9ECC900E64CA0 /* APITargetType.swift */,
 				F4B52BED25F9ECC900E64CA0 /* LoggerPlugin.swift */,
-				F4B52BEF25F9ECC900E64CA0 /* NetworkService.swift */,
+				F4B52BEF25F9ECC900E64CA0 /* APIService.swift */,
 				F4B52BF025F9ECC900E64CA0 /* Configuration.swift */,
+				F49E53A02686CA7E0022BAED /* Transform.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -155,7 +158,7 @@
 			children = (
 				F4B52BF825F9ECC900E64CA0 /* ObserverType+ObjectMapper.swift */,
 				F4B52BF925F9ECC900E64CA0 /* Single+MoyaObjectMapper.swift */,
-				F4B52BFA25F9ECC900E64CA0 /* Observable+ObjectMapper.swift */,
+				F4B52BFA25F9ECC900E64CA0 /* Response+ObjectMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -314,19 +317,20 @@
 				F4B52BD825F9EC8200E64CA0 /* ViewController.swift in Sources */,
 				F4B52C0225F9ECC900E64CA0 /* LoggerPlugin.swift in Sources */,
 				F4B52C0B25F9ECC900E64CA0 /* ObserverType+ObjectMapper.swift in Sources */,
-				F4B52C0D25F9ECC900E64CA0 /* Observable+ObjectMapper.swift in Sources */,
+				F4B52C0D25F9ECC900E64CA0 /* Response+ObjectMapper.swift in Sources */,
 				F4B52C0C25F9ECC900E64CA0 /* Single+MoyaObjectMapper.swift in Sources */,
 				F4B52C4625F9F38600E64CA0 /* AppInfoHelper.swift in Sources */,
 				F4B52C4825F9F38600E64CA0 /* DateHelper.swift in Sources */,
 				F4B52C1025F9ECC900E64CA0 /* APIConst.swift in Sources */,
 				F4B52BD425F9EC8200E64CA0 /* AppDelegate.swift in Sources */,
-				F4B52C0425F9ECC900E64CA0 /* NetworkService.swift in Sources */,
+				F4B52C0425F9ECC900E64CA0 /* APIService.swift in Sources */,
 				F4B52C0525F9ECC900E64CA0 /* Configuration.swift in Sources */,
 				F4B52C0125F9ECC900E64CA0 /* APITargetType.swift in Sources */,
 				F4B52C0025F9ECC900E64CA0 /* APIError.swift in Sources */,
 				F4B52C6925F9F5C900E64CA0 /* AppConfigManager.swift in Sources */,
 				F4B52BD625F9EC8200E64CA0 /* SceneDelegate.swift in Sources */,
 				F4B52C0F25F9ECC900E64CA0 /* API.swift in Sources */,
+				F49E53A12686CA7E0022BAED /* Transform.swift in Sources */,
 				F4B52C6425F9F47F00E64CA0 /* LanguageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

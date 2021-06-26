@@ -14,11 +14,11 @@ public final class LoggerPlugin: PluginType {
     
     public func willSend(_ request: RequestType, target: TargetType) {
         // 网络请求开始
-        guard NetworkService.Configuration.default.logEnable else { return }
+        guard Configuration.default.logEnable else { return }
     }
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
-        guard NetworkService.Configuration.default.logEnable else { return }
+        guard Configuration.default.logEnable else { return }
         // 网络请求结束
         switch result {
         case let .success(response):

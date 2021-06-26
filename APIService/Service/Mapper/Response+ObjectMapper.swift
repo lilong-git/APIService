@@ -1,5 +1,5 @@
 //
-//  Observable+ObjectMapper.swift
+//  Response+ObjectMapper.swift
 //  HiNovelSwift
 //
 //  Created by long on 2020/12/25.

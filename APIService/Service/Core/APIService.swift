@@ -1,5 +1,5 @@
 //
-//  NetworkService.swift
+//  APIService.swift
 //  HiNovelSwift
 //
 //  Created by Leo on 2020/12/25.
@@ -10,25 +10,25 @@ import RxSwift
 import SwiftyJSON
 import ObjectMapper
 
-open class NetworkService {
+open class APIService {
     
-    public let provider: MoyaProvider<MultiTarget>
+    let provider: MoyaProvider<MultiTarget>
     
-    public static let `default`: NetworkService = {
-        NetworkService(configuration: Configuration.default)
+    static let `default`: APIService = {
+        APIService(configuration: Configuration.default)
     }()
     
-    public init(configuration: Configuration) {
+    init(configuration: Configuration) {
         provider = MoyaProvider(configuration: configuration)
     }
 }
 
 public extension MoyaProvider {
-    convenience init(configuration: NetworkService.Configuration) {
-        let endpointClosure = { target -> Endpoint in
+    convenience init(configuration: Configuration) {
+        let endpointClosure = { (target: Target) -> Endpoint in
             MoyaProvider.defaultEndpointMapping(for: target)
-                        .adding(newHTTPHeaderFields: configuration.addingHeaders(target))
-                        .replacing(task: configuration.replacingTask(target))
+                .adding(newHTTPHeaderFields: configuration.addingHeaders(target))
+                .replacing(task: target.task)
         }
 
         let requestClosure = { (endpoint: Endpoint, closure: RequestResultClosure) -> Void in
@@ -55,7 +55,7 @@ public extension MoyaProvider {
 
 public extension TargetType {
     func request() -> Single<Moya.Response> {
-        return NetworkService.default.provider.rx.request(.target(self)).map { (response) -> Response in
+        return APIService.default.provider.rx.request(.target(self)).map { (response) -> Response in
             let jsonData = try JSONSerialization.jsonObject(with: response.data, options: .allowFragments)
             guard jsonData is [String: Any] else {
                 throw APIError.responseSerializationException(.jsonSerializationFailed(nil))
@@ -82,27 +82,3 @@ public extension Mappable {
     }
 }
 
-
-open class DecimalTransform: TransformType {
-    
-    public typealias Object = Decimal
-    
-    public typealias JSON = Decimal
-    
-    public init() {}
-    
-    public func transformFromJSON(_ value: Any?) -> Decimal? {
-        if let number = value as? NSNumber {
-            return Decimal(string: number.description)
-        }
-        if let number = value as? String {
-            return Decimal(string: number)
-        }
-        return nil
-    }
-    
-    public func transformToJSON(_ value: Decimal?) -> Decimal? {
-        return value
-    }
-
-}

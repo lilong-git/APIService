@@ -41,15 +41,15 @@ public func requestHeaders() -> [String : String]? {
 /// 签名
 private func signSort(_ headers:[String: String]) -> String {
     let keys = ["timestamp",
-                       "lang",
-                       "appType",
-                       "appVersion",
-                       "osType",
-                       "osVersion",
-                       "osUuid",
-                       "phoneBrand",
-                       "phoneType",
-                       "phoneOsVersion"]
+               "lang",
+               "appType",
+               "appVersion",
+               "osType",
+               "osVersion",
+               "osUuid",
+               "phoneBrand",
+               "phoneType",
+               "phoneOsVersion"]
     
     let signText = NSMutableString()
     for item in keys {
@@ -58,6 +58,24 @@ private func signSort(_ headers:[String: String]) -> String {
     return String(signText)
 }
 
+
+public struct Headers {
+    var timestamp: String = DateHelper.fetchCurrentTimestamp()
+    var lang: String = LanguageManager.default.currentAppLanguage.rawValue
+    var appType: String = AppInfoHelper.systemModel().lowercased()
+    var appVersion: String = AppInfoHelper.appVersion()
+    var osType: String = "0"
+    var osVersion: String = AppInfoHelper.systemVersion()
+    var osUuid: String = AppInfoHelper.deviceUUID()
+    var phoneBrand: String = "Apple"
+    var phoneType: String = AppInfoHelper.machineModel()
+    var phoneOsVersion: String = AppInfoHelper.systemVersion()
+    var utc: String = String(DateHelper.utc())
+    var sign: String = ""
+    var userToken: String = ""
+    
+    
+}
 
 public protocol APITargetType : TargetType {
     /// 语言环境
