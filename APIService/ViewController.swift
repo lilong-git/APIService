@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 //        self.request1()
         
         self.request2()
-
+     
     }
     
     func request1() {
